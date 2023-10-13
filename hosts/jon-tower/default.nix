@@ -56,7 +56,7 @@
 
   environment = {
     systemPackages = with pkgs; [               # System-Wide Packages
-      discord               # Messaging
+      #discord               # Messaging
       gmtp                  # Mount GoPro
       hugo                  # Static Website Builder
       jellyfin-media-player # Media Player

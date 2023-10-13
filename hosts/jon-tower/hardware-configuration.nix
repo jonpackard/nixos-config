@@ -24,6 +24,8 @@
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
+  networking.networkmanager.enable = true;
+
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/0e0791af-58d3-4768-b619-c61377fb9d3a";
       fsType = "btrfs";

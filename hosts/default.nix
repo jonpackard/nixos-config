@@ -33,8 +33,8 @@ in
       inherit inputs system unstable hyprland vars;
       host = {
         hostName = "jon-tower";
-        #mainMonitor = "HDMI-A-1";
-        #secondMonitor = "HDMI-A-2";
+        mainMonitor = "HDMI-A-1";
+        secondMonitor = "HDMI-A-2";
       };
     };
     modules = [                                             # Modules Used
