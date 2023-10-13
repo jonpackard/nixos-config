@@ -27,6 +27,28 @@ let
   lib = nixpkgs.lib;
 in
 {
+  jon-tower = lib.nixosSystem {                               # Desktop Profile
+    inherit system;
+    specialArgs = {                                         # Pass Flake Variable
+      inherit inputs system unstable hyprland vars;
+      host = {
+        hostName = "jon-tower";
+        #mainMonitor = "HDMI-A-1";
+        #secondMonitor = "HDMI-A-2";
+      };
+    };
+    modules = [                                             # Modules Used
+      nur.nixosModules.nur
+      ./jon-tower
+      ./configuration.nix
+
+      home-manager.nixosModules.home-manager {              # Home-Manager Module
+        home-manager.useGlobalPkgs = true;
+        home-manager.useUserPackages = true;
+      }
+    ];
+  };
+
   beelink = lib.nixosSystem {                               # Desktop Profile
     inherit system;
     specialArgs = {                                         # Pass Flake Variable
