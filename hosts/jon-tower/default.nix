@@ -13,7 +13,6 @@
 #           └─ ./virtualisation
 #               └─ default.nix
 #
-#  NOTE: Dual booted with windows 11. Disable fast-boot in power plan and bios and turn off hibernate to get wifi and bluetooth working. This only works once but on reboot is borked again. So using the old school BLT dongle.
 #
 
 { lib, pkgs, vars, ... }:
