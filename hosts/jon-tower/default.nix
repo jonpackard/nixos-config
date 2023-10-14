@@ -51,7 +51,8 @@
     };
   };
 
-  hyprland.enable = true;                       # Window Manager
+  #hyprland.enable = true;                       # Window Manager
+  gnome.enable = true;                       # Window Manager
 
   environment = {
     systemPackages = with pkgs; [               # System-Wide Packages
